@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import Tooltip from './Tooltip/Tooltip';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <Tooltip position="top" content="Top Tooltip">
+          <button>Top</button>
+        </Tooltip>
+
+        <Tooltip position="right" content="Right Tooltip">
+          <button>Right</button>
+        </Tooltip>
+
+        <Tooltip position="bottom" content="Bottom Tooltip">
+          <button>Bottom</button>
+        </Tooltip>
+
+        <Tooltip position="left" content="Left Tooltip">
+          <button>Left</button>
+        </Tooltip>
+      </div>
   );
-}
+};
 
 export default App;
